@@ -43,7 +43,7 @@ export class oAuthController {
       const { user, jwt } = req.user as { user: any; jwt: string };
       // res.json({ jwt });
       res.cookie("jwtToken", jwt);
-      res.redirect("http://localhost:3000");
+      res.redirect("https://interested-videos-app.vercel.app/");
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Internal server error" });
@@ -64,7 +64,7 @@ export class oAuthController {
     try {
       const { user, jwt } = req.user as { user: any; jwt: string };
       res.cookie("jwtToken", jwt);
-      res.redirect("http://localhost:3000");
+      res.redirect("https://interested-videos-app.vercel.app/");
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Internal server error" });
