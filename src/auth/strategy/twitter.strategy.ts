@@ -39,7 +39,7 @@ export class TwitterStrategy extends PassportStrategy(Strategy, 'twitter') {
       displayName: profile.displayName,
       picture: null,
     };
-    console.log(accessToken)
+    // console.log(accessToken)
     // console.log(userProfile);
     const oauthResponse = await this.oauth.validateTwitterOAuth(
       userProfile,

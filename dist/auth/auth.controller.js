@@ -26,8 +26,10 @@ let oAuthController = class oAuthController {
     async twitterCallback(req, res) {
         try {
             const { user, jwt } = req.user;
-            res.cookie("jwtToken", jwt);
-            res.redirect("http://localhost:3000");
+            res.cookie("jwtToken", jwt, {
+                httpOnly: true,
+            });
+            res.redirect("https://interested-videos-app.vercel.app/");
         }
         catch (error) {
             console.error(error);
@@ -38,8 +40,10 @@ let oAuthController = class oAuthController {
     async googleCallback(req, res) {
         try {
             const { user, jwt } = req.user;
-            res.cookie("jwtToken", jwt);
-            res.redirect("http://localhost:3000");
+            res.cookie("jwtToken", jwt, {
+                httpOnly: true,
+            });
+            res.redirect("https://interested-videos-app.vercel.app/");
         }
         catch (error) {
             console.error(error);
