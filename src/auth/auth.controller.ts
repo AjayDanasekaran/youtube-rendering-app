@@ -44,7 +44,7 @@ export class oAuthController {
       // res.json({ jwt });
       // res.cookie("jwtToken", jwt);
       res.cookie("jwtToken", jwt, {
-        httpOnly: true, // Ensures the cookie is only accessible via HTTP(S) requests, not client-side JavaScript
+        //httpOnly: true, // Ensures the cookie is only accessible via HTTP(S) requests, not client-side JavaScript
         // Add more options as needed, e.g., domain, path, secure, expires, etc.
       });
       res.redirect("https://interested-videos-app.vercel.app/");
@@ -69,7 +69,7 @@ export class oAuthController {
       const { user, jwt } = req.user as { user: any; jwt: string };
       // res.cookie("jwtToken", jwt);
       res.cookie("jwtToken", jwt, {
-        httpOnly: true, // Ensures the cookie is only accessible via HTTP(S) requests, not client-side JavaScript
+        //httpOnly: true, // Ensures the cookie is only accessible via HTTP(S) requests, not client-side JavaScript
         // Add more options as needed, e.g., domain, path, secure, expires, etc.
       });
       res.redirect("https://interested-videos-app.vercel.app/");
