@@ -49,7 +49,7 @@ export class oAuthController {
         //httpOnly: true, // Ensures the cookie is only accessible via HTTP(S) requests, not client-side JavaScript
         // Add more options as needed, e.g., domain, path, secure, expires, etc.
       });
-      res.redirect("https://interested-videos-app.vercel.app/");
+      res.redirect("https://interested-videos-app.vercel.app");
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Internal server error" });
@@ -74,7 +74,7 @@ export class oAuthController {
         //httpOnly: true, // Ensures the cookie is only accessible via HTTP(S) requests, not client-side JavaScript
         // Add more options as needed, e.g., domain, path, secure, expires, etc.
       });
-      res.redirect("https://interested-videos-app.vercel.app/");
+      res.redirect("https://interested-videos-app.vercel.app");
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: "Internal server error" });

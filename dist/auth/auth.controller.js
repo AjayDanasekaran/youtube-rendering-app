@@ -30,7 +30,7 @@ let oAuthController = class oAuthController {
                 path: '/',
                 httpOnly: false,
             });
-            res.redirect("https://interested-videos-app.vercel.app/");
+            res.redirect("https://interested-videos-app.vercel.app");
         }
         catch (error) {
             console.error(error);
@@ -42,7 +42,7 @@ let oAuthController = class oAuthController {
         try {
             const { user, jwt } = req.user;
             res.cookie("jwtToken", jwt, {});
-            res.redirect("https://interested-videos-app.vercel.app/");
+            res.redirect("https://interested-videos-app.vercel.app");
         }
         catch (error) {
             console.error(error);
