@@ -26,7 +26,10 @@ let oAuthController = class oAuthController {
     async twitterCallback(req, res) {
         try {
             const { user, jwt } = req.user;
-            res.cookie("jwtToken", jwt, {});
+            res.cookie("jwtToken", jwt, {
+                path: '/',
+                httpOnly: false,
+            });
             res.redirect("https://interested-videos-app.vercel.app/");
         }
         catch (error) {
